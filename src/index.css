@@ -1,3 +1,5 @@
+
+/* Style the body */
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -7,7 +9,118 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+/* Style the root */
+#root {
+  /* Make it a CSS grid */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  background-color: purple;
+  height: 100vh;
+}
+
+/* Style the pomodoro-clock */
+#pomodoro-clock {
+  border: 1px solid purple;
+  background-color: white;
+  padding: 1em;
+  grid-row-start: 2;
+  grid-row-end: span 1;
+  grid-column-start: 2;
+  grid-column-end: span 1; 
+  /* Make a subgrid */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  column-gap: 1em;
+  row-gap: 1em;
+
+}
+
+/* Style the pomodoro-clock-title */
+#pomodoro-clock-title {
+  grid-row-start: 1;
+  grid-row-end: span 1;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  
+}
+
+/* Style the break-container button */
+#break-container {
+  grid-row-start: 2;
+  grid-row-end: span 1;
+  grid-column-start: 1;
+  grid-column-end: span 1;
+}
+
+/* Style the break-increment button */
+#break-increment {
+  grid-row-start: 2;
+  grid-row-end: span 1;
+  grid-column-start: 2;
+  grid-column-end: span 1;
+}
+
+/* Style the break-decrement button */
+#break-decrement {
+  grid-row-start: 2;
+  grid-row-end: span 1;
+  grid-column-start: 3;
+  grid-column-end: span 1;
+}
+
+/* Style the session-container*/
+#session-container{
+  grid-row-start: 3;
+  grid-row-end: span 1;
+  grid-column-start: 1;
+  grid-column-end: span 1;
+}
+
+
+/* Style the session-increment button */
+#session-increment {
+  grid-row-start: 3;
+  grid-row-end: span 1;
+  grid-column-start: 2;
+  grid-column-end: span 1;
+}
+
+/* Style the session-decrement button */
+#session-decrement {
+  grid-row-start: 3;
+  grid-row-end: span 1;
+  grid-column-start: 3;
+  grid-column-end: span 1;
+}
+
+/* Style the timer container */
+#timer-container {
+  grid-row-start: 4;
+  grid-row-end: span 1;
+  grid-column-start: 1;
+  grid-column-end: span 1;
+}
+
+/* Style the start or stop button */
+#start_stop {
+  grid-row-start: 4;
+  grid-row-end: span 1;
+  grid-column-start: 2;
+  grid-column-end: span 1;
+}
+
+/* Style the reset button */
+#reset {
+  grid-row-start: 4;
+  grid-row-end: span 1;
+  grid-column-start: 3;
+  grid-column-end: span 1;
+}
+
+/* Style all buttons */
+button {
+  border-radius: 50%;
 }
