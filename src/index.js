@@ -218,18 +218,17 @@ class PomodoroClock extends React.Component{
           <label id='break-label' for='break-length'>Break Length</label>
           <p id='break-length'>{this.state.breakLength}</p>
         </div>
-        <button id='break-increment' onClick={this.incrementBreak}>Increase break</button>
-        <button id='break-decrement' onClick={this.decrementBreak}>Decrease break</button>
+        <button id='break-increment' onClick={this.incrementBreak}>&gt;</button>
+        <button id='break-decrement' onClick={this.decrementBreak}>&lt;</button>
         <div id='session-container'>
           <label id='session-label' for='sesion-length'>Session Length</label>
           <p id='session-length'>{this.state.sessionLength}</p>
         </div>
-        <button id='session-increment' onClick={this.incrementSession}>Increase session</button>
-        <button id='session-decrement' onClick={this.decrementSession}>Decrease session</button>
+        <button id='session-increment' onClick={this.incrementSession}>&gt;</button>
+        <button id='session-decrement' onClick={this.decrementSession}>&lt;</button>
         <div id='timer-container'>
           <label id='timer-label' for='time-left'>{this.state.isSession? 'Session': 'Break'}</label>
-          <br></br>
-          <time id='time-left'>
+          <p id='time-left'>
             {this.state.timeLeft.minutes < 10? 
               '0' + this.state.timeLeft.minutes.toString() :
               this.state.timeLeft.minutes}:
@@ -237,9 +236,9 @@ class PomodoroClock extends React.Component{
               '0' + this.state.timeLeft.seconds.toString() :
               this.state.timeLeft.seconds
             }
-          </time>
+          </p>
         </div>
-        <button id='start_stop' onClick={this.triggerPlayOrPause}> Start/Stop</button>
+        <button id='start_stop' onClick={this.triggerPlayOrPause}> &#9199; </button>
         <button id='reset' onClick={this.reset}>Reset</button>
         <audio id='beep' preload='auto' src={BEEPSRC}></audio>
       </div>
